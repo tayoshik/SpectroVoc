@@ -1,0 +1,35 @@
+Topic Title: "SpectroVoc: A New Phoneme Identification System Based on Speech Spectral Image Analysis"
+
+We propose SpectroVoc, a new method for phoneme identification from speech spectral images. Although many advances have been made in speech analysis technology in recent years, conventional methods that rely on speech signal processing still have problems with the accuracy of phoneme identification in environments with a lot of background noise and in the presence of a variety of accents. To solve this problem, this study developed a method that converts speech data into spectrograms, which are visual representations, and performs pattern recognition using deep learning models based on the image data.
+
+Specifically, first, audio data collected from a wide area is converted into a spectrogram, and features are extracted using a convolutional neural network (CNN) with this as input. Next, a clustering algorithm is applied based on the extracted features to group spectrograms with similar speech patterns. The frequency of occurrence of representative speech spectrograms in each group is analyzed to generate a ranking. Finally, the ranked data will be listened to by a linguist and classified into accurate phonemes to expand the training data for the AI model.
+
+In evaluation experiments, the method was applied to speech data in various languages and accents, and its effectiveness was verified by comparing it with conventional speech analysis methods. As a result, we confirmed that "SpectroVoc" shows high discrimination accuracy, especially in the presence of background noise, and opens up new possibilities for speech analysis. This research presents a new approach in the field of speech recognition and contributes to the development of future real-time speech analysis systems.
+
+
+In order to proceed with this project, we must first develop an AI model that effectively performs pattern recognition and ranking using speech spectral images, followed by human listening and classification of the ranked speech data into phonemes. Specific steps are outlined below.
+
+Step 1: Data Preparation and Preprocessing
+Collect speech data: Collect speech data from a variety of sources.
+Generate spectrogram: Generate a spectrogram from the audio data and store it as an image. Libraries such as librosa and matplotlib can be used for this purpose.
+
+Step 2: Clustering and ranking of image data
+Feature Extraction: Extract features from the generated spectrogram image using a deep learning model such as CNN.
+Clustering: Based on the extracted features, audio data with similar spectra are clustered. At this stage, K-means and hierarchical clustering can be used.
+Ranking: Calculate the frequency of occurrence and other statistical measures within each cluster to generate a ranking of the speech spectra.
+
+Step 3: Listen to the ranked speech and classify it into phonemes
+Selection of speech data: Based on the AI ranking results, the top-ranked speech data are selected.
+Human Listening: Expert linguists and phoneticians listen to these speech data and categorize them into phonemes. At this stage, detailed speech analysis and identification is performed.
+Annotation: The results of the phonetic transformation are recorded in a database and stored as annotations.
+
+Step 4: Train the supervised learning model
+Dataset construction: Annotated data is used to build a dataset for training supervised learning models.
+Train the model: Use deep learning models, including CNNs and RNNs, to learn direct transformations from spectrograms to phonemes.
+Evaluate and Optimize: Evaluate the model's performance on the validation dataset, adjusting hyperparameters and improving the model's architecture as needed.
+
+Step 5: Deployment and Feedback
+System Deployment: Deploy the trained model in a production environment.
+Collect feedback: Collect feedback from real users to help improve the model.
+Through this process, an AI-based phoneme identification system from the speech spectrum can be built. The combination of automatic processing of speech data and expert analysis by humans will lead to the establishment of highly accurate phoneme identification technology.
+
